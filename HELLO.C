@@ -71,7 +71,7 @@ submenu1()
 {
  char choice_char;
  clrscr();
-textcolor(11);
+ textcolor(14);
  gotoxy(17,10);
  printf("This code prints hello world using printf statement.\n\n");
  gotoxy(37,13);
@@ -89,7 +89,7 @@ int con,mod;
 char choice_char;
 float n1,n2;
 clrscr();
-textcolor(15);
+textcolor(1);
 gotoxy(37,5);
 printf("OPERATOR\n");
 gotoxy(33,8);
@@ -111,10 +111,10 @@ scanf("%d",&con);
 
  while(con != 1 && con !=2 && con != 3 && con !=4 && con != 5 && con != 0)
  {
-  gotoxy(30,16);
+  gotoxy(33,16);
   printf("Invalid input!try again: ");
   fflush(stdin);
-  gotoxy(30,15);
+  gotoxy(33,17);
   printf("Input: ");
   scanf("%d",&con);
  }
@@ -127,23 +127,27 @@ scanf("%d",&con);
  }
 
 
-clrscr();
-gotoxy(37,5);
+ clrscr();
  textcolor(3);
 if(con == 1){
- printf("Addition\n\n");
+ gotoxy(37,5);
+ printf("Addition");
 }
 else if(con == 2){
- printf("Subtraction \n\n");
+ gotoxy(35,5);
+ printf("Subtraction");
 }
 else if(con == 3){
- printf("Multiplication\n\n");
+ gotoxy(35,5);
+ printf("Multiplication");
 }
 else if(con == 4){
- printf("Division\n\n");
+ gotoxy(37,5);
+ printf("Division");
 }
 else if(con == 5){
- printf("Modulos\n\n");
+ gotoxy(37,5);
+ printf("Modulos");
 }
 
 gotoxy(30,8);
@@ -154,36 +158,36 @@ printf("Enter second number: ");
 scanf("%f",&n2);
 
  if(con == 1){
-   gotoxy(30,11);
+   gotoxy(37,12);
    printf("Sum = %.2f",n1 + n2);
   }
   else if(con == 2){
-   gotoxy(30,11);
+   gotoxy(32,12);
    printf("Difference = %.2f",n1 - n2);
   }
   else if(con == 3){
-   gotoxy(30,11);
+   gotoxy(32,12);
    printf("Product = %.2f",n1 * n2);
   }
  else if(con == 4){
    float quot = n1 / n2;
-   gotoxy(30,11);
+   gotoxy(32,12);
    printf("Quotient = %.2f", quot);
   }
   else if(con == 5){
-   gotoxy(30,11);
    mod = (int) n1 % (int) n2;
+   gotoxy(37,12);
    printf("Modulo = %d",mod);
   }
 
 
-gotoxy(30,13);
+gotoxy(25,14);
 printf("Return to main menu? Yes[y], No[n]: ");
 scanf("%s",&choice_char);
 
 while(choice_char != 'y' && choice_char != 'n'&&choice_char!='Y'&&choice_char!='N'){
 
-   gotoxy(30,14);
+   gotoxy(30,15);
    printf("Invalid input! Try again: ");
    scanf("%s",&choice_char);
 }
@@ -206,7 +210,7 @@ submenu3()
 int con;
 char choice_char;
 clrscr();
- textcolor(12);
+ textcolor(2);
 gotoxy(30,5);
 printf("Decision Making Statements");
 gotoxy(33,8);
@@ -228,7 +232,7 @@ scanf("%d",&con);
 
  while(con!=1&&con!=2&&con!=3&&con!=4&&con!=5&&con!=0)
  {
-  gotoxy(30,16);
+  gotoxy(33,16);
   printf("Invalid input! Try again: ");
   fflush(stdin);
   scanf("%d",&con);
@@ -245,19 +249,19 @@ if(con == 1)
 {
  int number;
  clrscr();
- gotoxy(37,5);
+ gotoxy(35,5);
  printf("If Statement");
 
  gotoxy(30,8);
- printf("Enter a number: ");
+ printf("Enter number: ");
  scanf("%d",&number);
 
  if(number > 0)
  {
-  gotoxy(30,10);
+  gotoxy(30,11);
   printf("you entered: %d",number);
  }
- gotoxy(30,11);
+ gotoxy(30,14);
  printf("The if statement is easy");
 }
 
@@ -374,50 +378,50 @@ else if(con == 5)
  switch(week)
  {
   case 1:
-  gotoxy(35,18);
+  gotoxy(35,13);
   printf("Monday");
   break;
 
   case 2:
-  gotoxy(35,18);
+  gotoxy(35,13);
   printf("Tuesday");
   break;
 
   case 3:
-  gotoxy(35,18);
+  gotoxy(35,13);
   printf("Wednesday");
   break;
 
   case 4:
-  gotoxy(35,18);
+  gotoxy(35,13);
   printf("Thursday");
   break;
 
   case 5:
-  gotoxy(35,18);
+  gotoxy(35,13);
   printf("Friday");
   break;
 
   case 6:
-  gotoxy(35,18);
+  gotoxy(35,13);
   printf("Saturday");
   break;
 
   case 7:
-  gotoxy(35,18);
+  gotoxy(35,13);
   printf("Sunday");
   break;
  }
 
 }
 
- gotoxy(25,20);
+ gotoxy(30,20);
  printf("Return to main menu? Yes[y] No[n] ");
  scanf("%s",&choice_char);
 
  while(choice_char!='y'&&choice_char!='Y'&&choice_char!='n'&&choice_char!='N')
  {
- gotoxy(30,14);
+ gotoxy(30,21);
  printf("Invalid input! try again: ");
  fflush(stdin);
  scanf("%s",&choice_char);
@@ -442,6 +446,7 @@ submenu4(){
 char choice_char;
 int con;
 clrscr();
+ textcolor(3);
  gotoxy(37,5);
  printf("Loops");
  gotoxy(33,8);
@@ -543,7 +548,7 @@ scanf("%s",&choice_char);
 
 while(choice_char!='y'&&choice_char!='Y'&&choice_char!='n'&&choice_char!='N')
  {
-  gotoxy(30,14);
+  gotoxy(30,21);
   printf("Invalid input! Try again: ");
   fflush(stdin);
   scanf("%s",&choice_char);
@@ -597,22 +602,22 @@ submenu5()
  }
  else if(con == 1){
    int arr[100],i,n,max,min;
-   int q=13;
+   int q=7;
    clrscr();
 
-   gotoxy(33,8);
+   gotoxy(33,3);
    printf("Inputted array size.\n");
-   gotoxy(0,10);
+   gotoxy(0,5);
    printf("finds max and min values in an array by asking for size and inputting values");
 
-   gotoxy(34,12);
+   gotoxy(34,6);
    printf("Enter array size: ");
    scanf("%d",&n);
 
    for(i = 0;i<n;i++)
    {
     gotoxy(35,q);
-    printf("Enter number: ");
+    printf("Enter array %d: ",i+1);
     scanf("%d",&arr[i]);
     q=q+1;
    }
@@ -676,13 +681,13 @@ submenu5()
    c=c+1;
   }
  }
-gotoxy(25,20);
+gotoxy(25,22);
 printf("Return to main menu? Yes[y] No[n] ");
 scanf("%s",&con);
 
 while(con!='y'&&con!='Y'&&con!='n'&&con!='N')
 {
- gotoxy(40,14);
+ gotoxy(27,23);
  printf("Invalid input! Try again: ");
  fflush(stdin);
  scanf("%s",&con);
