@@ -499,8 +499,8 @@ clrscr();
   gotoxy(7,8);
   printf("C program that determines the sum of n natural numbers using while loop");
 
-  gotoxy(20,11);
-  printf("Enter how many numbers you will input: ");
+  gotoxy(30,11);
+  printf("Enter the natural number: ");
   scanf("%d",&num);
 
   while(i<=num)
@@ -508,7 +508,7 @@ clrscr();
   sum = sum + i;
   i++;
   }
-  gotoxy(22 ,14);
+  gotoxy(25 ,14);
   printf("Sum of first %d natural number is : %d", num, sum);
  }
  else if(con == 3)
